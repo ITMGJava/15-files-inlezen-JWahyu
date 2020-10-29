@@ -3,26 +3,26 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class FilesInlezen {
-    boolean check = false;
+//    boolean check = false;
 
     public void bestandCheck() {
-        while (!check) {
+//        while (!check) {
             try {
                 bestandThrow();
             } catch (FileNotFoundException f) {
                 System.out.println("Je bestand is niet gevonden. Probeer opnieuw.");
-                check = false;
+//                check = false;
             }
-        }
+//        }
     }
 
     public void bestandThrow() throws FileNotFoundException {
         File bestandVinden = new File("Hello.txt");
         Scanner bestandLezen = new Scanner("Hello.txt");
         if (bestandLezen.hasNextLine()) {
-            System.out.println(bestandLezen);
+            System.out.println(bestandLezen.nextLine());
         }
-        check = true;
+//        check = true;
     }
 
     static void bestandInlezen(String bestandsNaam) {
